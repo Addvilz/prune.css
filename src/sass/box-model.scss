@@ -1,0 +1,15 @@
+@mixin property_counter($property, $size) {
+    #{$property}: $size + px;
+}
+
+@for $i from 0 through 25 {
+    .pad-#{$i} {
+        @include property_counter(padding, $i);
+    }
+}
+
+@for $i from 0 through 25 {
+    .mrg-#{$i} {
+        @include property_counter(margin, $i);
+    }
+}

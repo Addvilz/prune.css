@@ -1,0 +1,22 @@
+{
+  "name": "prune.css",
+  "version": "1.0.0",
+  "authors": [
+    "Matiss Treinis <mrtreinis@gmail.com>"
+  ],
+  "description": "Faceless CSS framework",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "css"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/addvilz/prune.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

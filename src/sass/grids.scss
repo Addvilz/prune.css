@@ -1,0 +1,50 @@
+$class-slug: 'col';
+
+.row {
+    &:after, &:before {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.prune-column {
+    float: left;
+    min-height: 1px;
+}
+
+@mixin grid_columns($subclass) {
+    @if '-' != $subclass {
+        $subclass: '-' + $subclass + '-'
+    }
+
+    @for $i from 1 through 24 {
+        .#{$class-slug}#{$subclass}#{$i} {
+            @extend .prune-column;
+            width: percentage(($i * 4.16666666667) / 100);
+        }
+    }
+}
+
+@media screen {
+    @include grid_columns('-');
+}
+
+@media screen and (min-width: 320px) {
+    @include grid_columns('sm');
+}
+
+@media screen and (min-width: 768px) {
+    @include grid_columns('md');
+}
+
+@media screen and (min-width: 992px) {
+    @include grid_columns('lg');
+}
+
+@media screen and (min-width: 1200px) {
+    @include grid_columns('xl');
+}
