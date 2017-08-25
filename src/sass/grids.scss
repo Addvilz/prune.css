@@ -23,7 +23,8 @@ $class-slug: 'col';
 
     @for $i from 1 through 24 {
         .#{$class-slug}#{$subclass}#{$i} {
-            @extend .prune-column;
+            float: left;
+            min-height: 1px;
             width: percentage(($i * 4.16666666667) / 100);
         }
     }

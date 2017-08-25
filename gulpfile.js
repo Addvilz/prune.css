@@ -10,11 +10,11 @@ var gulp = require('gulp'),
 
 var header = '/*! ' + (new Date()).toISOString() + ' prune.css | Apache 2.0 License | github.com/Addvilz/prune.css */';
 
-gulp.task('sass', function () {
+gulp.task('sass', ['minify'] ,function () {
 
     var files = [
         './node_modules/normalize.css/normalize.css',
-        './src/sass/**/*.scss'
+        './src/sass/prune.scss'
     ];
 
     var options = {
